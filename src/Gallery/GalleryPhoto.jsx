@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { useIntersection } from './useIntersection'
+// import { useIntersection } from './useIntersection'
 import Loading from './Loading'
 
 export default function GalleryPhoto({
@@ -9,14 +9,14 @@ export default function GalleryPhoto({
   index,
   handleClick,
 }) {
-  const [isInView, setIsInView] = useState(false)
+  const [isInView, setIsInView] = useState(true)
   const [loading, setLoading] = useState(true)
   const imgRef = useRef()
 
-  useIntersection(imgRef, () => {
-    setIsInView(true)
-    setLoading(true)
-  })
+  // useIntersection(imgRef, () => {
+  //   setIsInView(true)
+  //   setLoading(true)
+  // })
 
   const handleLoad = () => {
     setLoading(false)
